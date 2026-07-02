@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="theme-color" content="#0f2e3f">
+  <title>洪金焦 · 温州豪仕文具有限公司</title>
+  <meta property="og:title" content="洪金焦 · 温州豪仕文具有限公司">
+  <meta property="og:description" content="总经理 | 手机 13868501517 | 文具制造与定制">
+  <meta property="og:image" content="assets/wechat-official.png">
+  <style>
+    :root {
+      --bg: #0f2e3f;
+      --surface: #ffffff;
+      --surface-2: #f6f8fa;
+      --primary: #1a5f7a;
+      --primary-dark: #134a60;
+      --accent: #c8a45c;
+      --accent-light: #f3e8cf;
+      --text: #1f2937;
+      --text-muted: #6b7280;
+      --border: #e5e7eb;
+      --shadow: 0 10px 40px rgba(15, 46, 63, 0.18);
+      --radius: 20px;
+      --radius-sm: 12px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      min-height: 100%;
+      background: var(--bg);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      padding: 24px 16px 40px;
+      background:
+        radial-gradient(circle at 10% 0%, rgba(200, 164, 92, 0.18) 0%, transparent 35%),
+        radial-gradient(circle at 90% 100%, rgba(26, 95, 122, 0.35) 0%, transparent 40%),
+        var(--bg);
+    }
+
+    .card {
+      width: 100%;
+      max-width: 460px;
+      background: var(--surface);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      animation: rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(28px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero {
+      position: relative;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: #fff;
+      padding: 58px 28px 34px;
+      text-align: center;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      left: 0; right: 0; bottom: -24px;
+      height: 48px;
+      background: var(--surface);
+      border-radius: 50% 50% 0 0;
+    }
+
+    .logo {
+      width: 72px;
+      height: 72px;
+      margin: 0 auto 16px;
+      border-radius: 50%;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--primary);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    }
+
+    .logo { display: none; }
+
+    .avatar {
+      width: 88px;
+      height: 88px;
+      margin: 0 auto 16px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 3px solid rgba(255,255,255,0.3);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+      background: #fff;
+    }
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .name { font-size: 28px; font-weight: 700; margin: 0 0 6px; letter-spacing: 1px; }
+    .title { font-size: 16px; opacity: 0.92; margin: 0 0 10px; }
+    .company { font-size: 15px; opacity: 0.82; margin: 0; }
+
+    .body { padding: 18px 22px 28px; }
+
+    .actions {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 22px;
+    }
+
+    .action {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 16px 8px;
+      background: var(--surface-2);
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+      text-decoration: none;
+      color: var(--text);
+      font-size: 13px;
+      font-weight: 600;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .action:active { transform: scale(0.97); }
+    .action:hover { background: #fff; box-shadow: 0 4px 14px rgba(15,46,63,0.08); }
+
+    .action .icon {
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: #fff;
+      color: var(--primary);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .action .icon svg { width: 20px; height: 20px; }
+
+    .section-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin: 0 0 12px;
+    }
+
+    .info-list {
+      background: var(--surface-2);
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      margin-bottom: 22px;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border);
+      font-size: 15px;
+    }
+
+    .info-item:last-child { border-bottom: none; }
+
+    .info-item .icon {
+      flex: 0 0 22px;
+      color: var(--primary);
+    }
+
+    .info-item .content { flex: 1; min-width: 0; }
+    .info-item .label { font-size: 12px; color: var(--text-muted); margin-bottom: 2px; }
+    .info-item .value { font-weight: 600; word-break: break-all; }
+
+    .qrcodes {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 22px;
+    }
+
+    .qr {
+      background: var(--surface-2);
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: center;
+      transition: transform 0.15s ease;
+    }
+
+    .qr:active { transform: scale(0.98); }
+
+    .qr img {
+      width: 100%;
+      max-width: 110px;
+      aspect-ratio: 1 / 1;
+      object-fit: contain;
+      border-radius: 8px;
+      display: block;
+      margin: 0 auto 8px;
+      background: #fff;
+    }
+
+    .qr .label { font-size: 13px; font-weight: 600; color: var(--text); }
+    .qr .hint { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+
+    .form-card {
+      background: var(--surface-2);
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+      padding: 18px;
+    }
+
+    .form-title {
+      font-size: 17px;
+      font-weight: 700;
+      margin: 0 0 4px;
+    }
+
+    .form-sub {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin: 0 0 16px;
+    }
+
+    .field { margin-bottom: 14px; }
+
+    .field label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--text);
+    }
+
+    .field input,
+    .field textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      font-size: 15px;
+      font-family: inherit;
+      background: #fff;
+      color: var(--text);
+      outline: none;
+      transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .field input:focus,
+    .field textarea:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(26, 95, 122, 0.1);
+    }
+
+    .field textarea { resize: vertical; min-height: 76px; }
+
+    .btn {
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--accent) 0%, #b08d48 100%);
+      color: #fff;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.15s ease, filter 0.15s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .btn:active { transform: scale(0.98); }
+    .btn:disabled { opacity: 0.7; cursor: not-allowed; }
+
+    .footer {
+      text-align: center;
+      padding: 18px 22px 0;
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .toast {
+      position: fixed;
+      left: 50%;
+      bottom: 32px;
+      transform: translateX(-50%) translateY(20px);
+      background: rgba(15, 46, 63, 0.95);
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 999px;
+      font-size: 14px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease, transform 0.25s ease;
+      z-index: 100;
+      white-space: nowrap;
+    }
+
+    .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+    @media (max-width: 360px) {
+      .actions { grid-template-columns: 1fr; }
+      .qrcodes { grid-template-columns: 1fr; }
+      .qr { display: flex; align-items: center; gap: 14px; text-align: left; }
+      .qr img { width: 84px; margin: 0; }
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <header class="hero">
+      <div class="avatar">
+        <img src="assets/avatar.jpg" alt="洪金焦头像">
+      </div>
+      <h1 class="name">洪金焦</h1>
+      <p class="title">总经理</p>
+      <p class="company">温州豪仕文具有限公司</p>
+    </header>
+
+    <div class="body">
+      <nav class="actions">
+        <a class="action" href="tel:13868501517" aria-label="一键拨号">
+          <span class="icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </span>
+          <span>一键拨号</span>
+        </a>
+
+        <button class="action" id="copyWechat" type="button" aria-label="复制微信号">
+          <span class="icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </span>
+          <span>复制微信号</span>
+        </button>
+
+        <a class="action" id="navLink" href="#" target="_blank" rel="noopener" aria-label="导航到公司">
+          <span class="icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+          </span>
+          <span>导航到公司</span>
+        </a>
+      </nav>
+
+      <p class="section-title">联系方式</p>
+      <div class="info-list">
+        <div class="info-item">
+          <span class="icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </span>
+          <div class="content">
+            <div class="label">手机</div>
+            <div class="value"><a href="tel:13868501517" style="color:inherit;text-decoration:none;">13868501517</a></div>
+          </div>
+        </div>
+        <div class="info-item">
+          <span class="icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </span>
+          <div class="content">
+            <div class="label">地址</div>
+            <div class="value">平阳县腾蛟镇印刷园区D-1幢A座1-8号</div>
+          </div>
+        </div>
+      </div>
+
+      <p class="section-title">扫码联系</p>
+      <div class="qrcodes">
+        <div class="qr">
+          <img src="assets/wechat-official.png" alt="微信公众号二维码" loading="lazy">
+          <div>
+            <div class="label">微信公众号</div>
+            <div class="hint">扫码关注</div>
+          </div>
+        </div>
+        <div class="qr">
+          <img src="assets/xiaohongshu.png" alt="小红书二维码" loading="lazy">
+          <div>
+            <div class="label">小红书</div>
+            <div class="hint">扫码关注</div>
+          </div>
+        </div>
+        <div class="qr" id="wechatQrWrap">
+          <img src="assets/wechat-id.png" alt="微信号" loading="lazy">
+          <div>
+            <div class="label">微信号</div>
+            <div class="hint" id="wechatHint">长按识别</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-card">
+        <h2 class="form-title">留下您的联系方式</h2>
+        <p class="form-sub">我们会尽快与您取得联系</p>
+        <form id="leadForm" novalidate>
+          <div class="field">
+            <label for="name">您的姓名</label>
+            <input type="text" id="name" name="name" placeholder="怎么称呼您" autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="phone">手机号码 <span style="color:#e11d48">*</span></label>
+            <input type="tel" id="phone" name="phone" placeholder="请输入手机号" autocomplete="tel" maxlength="11" inputmode="tel" required>
+          </div>
+          <div class="field">
+            <label for="message">留言(选填)</label>
+            <textarea id="message" name="message" placeholder="您需要什么产品或服务?"></textarea>
+          </div>
+          <button type="submit" class="btn" id="submitBtn">提交留言</button>
+        </form>
+      </div>
+
+      <footer class="footer">
+        温州豪仕文具有限公司 · 专业文具制造与定制<br>
+        平阳县腾蛟镇印刷园区D-1幢A座1-8号
+      </footer>
+    </div>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    // =================== 配置区(按需修改) ===================
+    const CONFIG = {
+      // 微信号文字，用于"复制微信号"按钮
+      wechatId: '13868501517',
+      // 客户留言提交地址;与后端部署在同域时用 '/api/submit',单独静态托管时改为后端完整地址
+      apiEndpoint: '/api/submit',
+      // 地图服务商:'amap'(高德搜索) | 'baidu'(百度搜索) | 'tencent'(腾讯搜索)
+      mapProvider: 'amap',
+      company: '温州豪仕文具有限公司',
+      address: '平阳县腾蛟镇印刷园区D-1幢A座1-8号'
+    };
+
+    // =================== 工具函数 ===================
+    const $ = (sel) => document.querySelector(sel);
+
+    function showToast(msg, duration = 2200) {
+      const toast = $('#toast');
+      toast.textContent = msg;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), duration);
+    }
+
+    async function copyText(text) {
+      if (!text) return false;
+      try {
+        if (navigator.clipboard && window.isSecureContext) {
+          await navigator.clipboard.writeText(text);
+        } else {
+          const ta = document.createElement('textarea');
+          ta.value = text;
+          ta.setAttribute('readonly', '');
+          ta.style.position = 'absolute';
+          ta.style.left = '-9999px';
+          document.body.appendChild(ta);
+          ta.select();
+          document.execCommand('copy');
+          document.body.removeChild(ta);
+        }
+        return true;
+      } catch (e) {
+        return false;
+      }
+    }
+
+    function buildMapUrl() {
+      const query = encodeURIComponent(CONFIG.company + ' ' + CONFIG.address);
+      switch (CONFIG.mapProvider) {
+        case 'baidu': return `https://map.baidu.com/search/${query}`;
+        case 'tencent': return `https://apis.map.qq.com/uri/v1/search?keyword=${encodeURIComponent(CONFIG.company)}&region=${encodeURIComponent('温州')}&referer=h5card`;
+        case 'amap':
+        default: return `https://uri.amap.com/search?keyword=${query}`;
+      }
+    }
+
+    // =================== 初始化 ===================
+    $('#navLink').href = buildMapUrl();
+
+    $('#copyWechat').addEventListener('click', async () => {
+      if (!CONFIG.wechatId) {
+        showToast('请先设置微信号(CONFIG.wechatId)');
+        return;
+      }
+      const ok = await copyText(CONFIG.wechatId);
+      showToast(ok ? `已复制:${CONFIG.wechatId}` : '复制失败,请长按识别二维码');
+    });
+
+    // 点击图片放大(二维码)
+    document.querySelectorAll('.qr img').forEach(img => {
+      img.addEventListener('click', () => {
+        // 在微信内置浏览器中可调用预览;普通浏览器则打开图片
+        if (typeof WeixinJSBridge !== 'undefined' && WeixinJSBridge.invoke) {
+          WeixinJSBridge.invoke('imagePreview', {
+            current: img.src,
+            urls: Array.from(document.querySelectorAll('.qr img')).map(i => i.src)
+          });
+        } else {
+          window.open(img.src, '_blank');
+        }
+      });
+    });
+
+    // =================== 表单提交 ===================
+    $('#leadForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const phone = $('#phone').value.trim();
+      const name = $('#name').value.trim();
+      const message = $('#message').value.trim();
+      const btn = $('#submitBtn');
+
+      if (!/^1[3-9]\d{9}$/.test(phone)) {
+        showToast('请输入正确的 11 位手机号');
+        $('#phone').focus();
+        return;
+      }
+
+      btn.disabled = true;
+      btn.textContent = '提交中...';
+
+      const payload = {
+        name: name || '匿名客户',
+        phone,
+        message: message || '',
+        source: location.href,
+        createdAt: new Date().toISOString()
+      };
+
+      try {
+        const res = await fetch(CONFIG.apiEndpoint, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+
+        if (!res.ok) {
+          const err = await res.json().catch(() => ({ message: '提交失败' }));
+          throw new Error(err.message || `提交失败(${res.status})`);
+        }
+
+        showToast('提交成功,我们会尽快联系您!');
+        $('#leadForm').reset();
+      } catch (err) {
+        console.error(err);
+        showToast(err.message || '网络异常,请稍后重试');
+      } finally {
+        btn.disabled = false;
+        btn.textContent = '提交留言';
+      }
+    });
+  </script>
+</body>
+</html>
