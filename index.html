@@ -417,23 +417,7 @@
       </div>
 
       <div class="form-card">
-        <h2 class="form-title">留下您的联系方式</h2>
-        <p class="form-sub">我们会尽快与您取得联系</p>
-        <form id="leadForm" novalidate>
-          <div class="field">
-            <label for="name">您的姓名</label>
-            <input type="text" id="name" name="name" placeholder="怎么称呼您" autocomplete="name">
-          </div>
-          <div class="field">
-            <label for="phone">手机号码 <span style="color:#e11d48">*</span></label>
-            <input type="tel" id="phone" name="phone" placeholder="请输入手机号" autocomplete="tel" maxlength="11" inputmode="tel" required>
-          </div>
-          <div class="field">
-            <label for="message">留言(选填)</label>
-            <textarea id="message" name="message" placeholder="您需要什么产品或服务?"></textarea>
-          </div>
-          <button type="submit" class="btn" id="submitBtn">提交留言</button>
-        </form>
+        <iframe id="idy_frame" height="100%" width="100%" src="https://wj.qq.com/s2/27244534/9bc4/" frameborder="0" style="min-height:580px;border-radius:10px;" allowfullscreen sandbox="allow-same-origin allow-scripts allow-modals allow-downloads allow-forms allow-popups"></iframe>
       </div>
 
       <footer class="footer">
@@ -527,7 +511,7 @@
       });
     });
 
-    // =================== 表单提交 ===================
+    // =================== 表单提交(已替换为腾讯问卷iframe,此代码保留备用) ===================
     $('#leadForm').addEventListener('submit', async (e) => {
       e.preventDefault();
       const phone = $('#phone').value.trim();
